@@ -55,7 +55,8 @@ def convertNumber(num):
             tens_value = tens[tens_value]
             ones_value = ones[ones_value]
 
-        word = hundred_value + tens_value + ones_value + thousands[t] + word
+        if (hundred_value + tens_value + ones_value != ""):
+            word = hundred_value + tens_value + ones_value + thousands[t] + word
         t+= 1
 
     return word
